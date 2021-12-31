@@ -1,0 +1,58 @@
+format_version: v1.0
+type: UniqueComponent
+attributes: {id: drvWifiWinc}
+children:
+- type: Symbols
+  children:
+  - type: Combo
+    attributes: {id: DRV_WIFI_WINC_LOG_LEVEL}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: Verbose}
+  - type: KeyValueSet
+    attributes: {id: DRV_WIFI_WINC_PIO_SRC_SELECT}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: '50'}
+  - type: String
+    attributes: {id: DRV_WIFI_WINC_SPI_INST}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: drvWifiWinc, value: drv_spi_0}
+  - type: Integer
+    attributes: {id: DRV_WIFI_WINC_SPI_INST_IDX}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: drvWifiWinc, value: '0'}
+  - type: Boolean
+    attributes: {id: DRV_WIFI_WINC_USE_SYS_DEBUG}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: drvWifiWinc, value: 'true'}
+- type: Attachments
+  children:
+  - type: DirectDependency
+    attributes: {id: spi}
+    children:
+    - type: Attributes
+      children:
+      - type: String
+        attributes: {id: targetComponentID}
+        children:
+        - {type: Value, value: drv_spi_0}
+      - type: String
+        attributes: {id: targetAttachmentID}
+        children:
+        - {type: Value, value: drv_spi}
+- type: ElementPosition
+  attributes: {x: '504', y: '290', id: drvWifiWinc}
