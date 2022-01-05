@@ -30,6 +30,7 @@ To build the application, refer to the following table and open the project usin
 | Project Name      | Description                                    |
 | ----------------- | ---------------------------------------------- |
 | sam_9x60_ek_winc1500.X | MPLABX project for [SAM9X60-EK Evaluation Kit](https://www.microchip.com/developmenttools/ProductDetails/DT100126) |
+| sam_9x60_ek_winc1500_freertos.X | MPLABX project for [SAM9X60-EK Evaluation Kit](https://www.microchip.com/developmenttools/ProductDetails/DT100126) |
 |||
 
 ## Setting up AT91Bootstrap loader
@@ -42,7 +43,7 @@ The following table shows the target hardware for the application projects.
 
 | Project Name| Board|
 |:---------|:---------:|
-| sam_9x60_ek.X <br> sam_9x60_ek_freertos.X <br> sam_9x60_ek_freertos_iar.IAR/usart_echo_sam_9x60_ek_freertos.eww <br> sam_9x60_ek_iar.IAR/usart_echo_sam_9x60_ek.eww | [SAM9X60-EK Evaluation Kit](https://www.microchip.com/developmenttools/ProductDetails/DT100126) |
+| sam_9x60_ek_winc1500.X <br> sam_9x60_ek_winc1500_freertos.X <br>  | [SAM9X60-EK Evaluation Kit](https://www.microchip.com/developmenttools/ProductDetails/DT100126) |
 |||
 
 ### Setting up [SAM9X60-EK Evaluation Kit](https://www.microchip.com/developmenttools/ProductDetails/DT100126)
@@ -82,3 +83,7 @@ The following table shows the target hardware for the application projects.
 
 8. Reset the board to run the application
 9. The board run as a TCP client to connect to the TCP server running on your PC, and set the message "TCP message from WINC module." to the TCP server. TCP server echo back the message to the board.
+    
+    ![command_prompt](images/command_prompt_log.png)  
+    
+    ![device console](images/device_console_log.png)  
